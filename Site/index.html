@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title></title>
+</head>
+<body onload="animation()">
+    <div class="expl"><!-- Partie explicative-->
+        <!-- Placement logo-->
+        <img src="img/Krys-Logo.png" width="68" class="logo">
+        <span id="texte1"> <!-- Premier texte-->
+            <h1 class='p1' id="l1">PRÊTS</h1>
+            <h1 class='p1' id="l2">POUR LA RENTRÉE</h1>
+            <h1 class='p1' id="l3">DES SÉRIES ?</h1>
+        </span>
+        <span id="texte2"> <!-- Deuxième texte-->
+            <h2 class="p2" id="l4">AVEC</h2>
+            <h2 class="p2" id="l5">LE PACK KONNECTÉ</h2>
+            <h2 class="p1" id="l6">À PARTIR DE</h2>
+            <h2 class="p1" id="l7">99€*</h2>
+        </span>
+        <span id="texte3">
+            <h2 class="p1" id="l8">2 PAIRES À LA VUE :</h2>
+            <h2 class="p1" id="l9">1 OPTIQUE</h2>
+            <h2 class="p1" id="l10">ANTI-LUMIÈRE BLEUE</h2>
+            <h2 class="p1" id="l11">+ 1 SOLAIRE **</h2>
+        </span>
+        <span id="texte4">
+            <h2 class="p1" id="l12">KRYS PALAISEAU - PARIS</h2>
+            <h2 class="p1" id="l13">55 RUE DE PARIS</h2>
+            <h2 class="p1" id="l14">91120 PALAISEAU</h2>
+            <a href="http://www.krys.com/" id="link"><i class="fa fa-map-marker"> </i> Me rendre en magasin</a>
+        </span>
+        <span id="explication">
+            * Prix de vente TTC conseillé en magasin. ** Du 24/08/2017 au 31/10/2017<br/>
+            Voir conditions complètes* sur <span style="text-decoration: underline">krys.com/offre-rentree-2017</span><br/>
+            Dispositif médical. Consultez un professionel de santé.
+        </span>
+    </div>
+    <div> <!-- Partie Vidéo/Plan -->
+    <video autoplay loop  class="vid">
+  <source src="img/boucle.mp4" type="video/mp4">
+</video>
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2632.437772109292!2d2.2447649507553504!3d48.716226218559186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6781597ef023f%3A0x18b3cda0833413d6!2s55+Rue+de+Paris%2C+91120+Palaiseau!5e0!3m2!1sfr!2sfr!4v1521015520131" frameborder="0" style="border:0" id="map" allowfullscreen></iframe>
+    </div>
+    <script type="text/javascript">
+        function animation(){
+            //Initialisation des variables
+            var texte1 = document.getElementById('texte1');
+            var texte2 = document.getElementById('texte2');
+            var texte3 = document.getElementById('texte3');
+            var texte4 = document.getElementById('texte4');
+            var explication = document.getElementById('explication');
+            var map = document.getElementById('map');
+            setTimeout(function(){ //Suppression de texte1 + Ajout de texte2
+                texte1.style.display = "none";
+                texte2.style.display = "inline-block";
+            }, 2800);
+            setTimeout(function(){ //Suppression de texte1 + Ajout de texte2 + recadrage explication
+                texte2.style.display = "none";
+                texte3.style.display = "inline-block";
+                explication.style.marginTop = '16%';
+            }, 5600);
+            setTimeout(function(){ //Suppression de texte3 + Ajout de texte4
+                texte3.style.display = "none";
+                texte4.style.display = "inline-block";
+                map.style.display = "inline-block";
+                explication.style.display = "none";
+            }, 9600);
+        }
+    </script>
+</body>
+</html>
