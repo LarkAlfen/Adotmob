@@ -7,7 +7,7 @@ html, body{
     margin: 0;
     background-color: #4facdb;
     height: 100%;
-    
+    overflow: hidden;
     font-family: Helvetica, sans-serif;
 }
 .expl{
